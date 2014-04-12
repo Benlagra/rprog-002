@@ -1,0 +1,6 @@
+.gitignore
+.DS_Store
+Quiz01.pdf
+Swirl.Rhistory
+hw1_data.csv
+specdata/
