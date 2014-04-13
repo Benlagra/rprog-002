@@ -29,17 +29,14 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
 		}
 
 
-		if (!file.exists(filename)){
-		}
-		else{
-		print('The file can not be found')
-		} 
 		filename <- paste(directory, '/', filename, sep = '')
 		
 		data = read.csv(filename)
-		cdata = data[complete.cases(data),]
-		len = len + nrow(cdata)
-		me_id = me_id + nrow(cdata)*mean(cdata[[pollutant]])
+		cdata = data[complete.cases(data[[pollutant]]),]
+		if (nrow(cdata) > 0){
+			len = len + nrow(cdata)
+			me_id = me_id + nrow(cdata)*mean(cdata[[pollutant]])
+		}
 	}
 
 	round(me_id/len, digit=3)
