@@ -30,14 +30,6 @@ complete <- function(directory, id = 1:332) {
 			filename <- paste('00', as.character(id[i]), '.csv', sep = '')
 		}
 
-
-		if (!file.exists(filename)){
-		}
-		else{
-		print('The file can not be found')
-		} 
-		filename <- paste(directory, '/', filename, sep = '')
-		
 		data = read.csv(filename)
 		cases[i] = sum(complete.cases(data))
 	}
