@@ -11,7 +11,7 @@ library(XML)
 * rootNode[[1]]      (First Block Node)
 * xpathSApply(rootNode, '//name', xmlValue)      (Get an item with class name)
 
-### REF: http://www.omegahat.org/RSXML/shortIntro.pdf
+#### REF: http://www.omegahat.org/RSXML/shortIntro.pdf
 
 ## HTML
 
