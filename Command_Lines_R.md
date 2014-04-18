@@ -19,6 +19,7 @@ library(XML)
 
 * doc = htmlTreeParse(fileUrl, useInternalNodes=T)
 * scores = xpathSApply(doc, '//li[@class='score]', xmlValue)
+* getNodeSet(doc, '//table[@class = '']')
 
 ## JSON
 
